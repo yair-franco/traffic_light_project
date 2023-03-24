@@ -87,3 +87,30 @@ def read_catalog(filename): #takes data from Italian catalog and parses into a d
     df = df.rename(columns={'Depth/Km': 'Depth'})
     df = df.rename(columns={'Magnitude': 'Mag'})
     return df
+
+# def eqwindows(index,ewSize,bDates=None,slide=None):
+#     if bDates == None:
+#         bDates = []
+#     if slide == None:
+#         slide = []
+
+#     for i in range(len(index)):
+#         ew = index[i:i+ewSize] # filter 'ew' by 'wParams'
+#         ewEnd = time_year[ew][-1]
+#         bDates.append(ewEnd)
+#         #print(f"array lengths: {len(slide),len(bDates)}")
+#         #bDates.append(time_year[ew[-1]])
+#         #bDates.append(time_year[ew][-1]) # append last event date in 'ew'. Provided by ChatGPT
+
+#         bEW = calc_Mc_b(mag[ew])[2]
+#         addbVal_slide(slide,bEW,bDates)
+
+#         ewLens.append((np.max(time_year[ew])-np.min(time_year[ew])))
+
+#         if ew[-1] >= max(index):
+#             print(f"end of loop, steps: {i}; date of last eq: {ew[-1]}; last b: {bEW}")
+#             xMin = np.min(bDates)
+#             xMax = np.max(bDates)
+#             print(f"x range: {xMin} to {xMax}; array lengths: {len(slide),len(bDates)}")
+#             addbVal_slide(slide,bEW,bDates,xMin,xMax,1)
+#             break
