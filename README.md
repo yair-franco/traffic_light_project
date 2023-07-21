@@ -1,2 +1,2 @@
 # traffic_light_project
- My seismology research project
+ My seismology research project at the Berkeley Seismolab. This repository is due for a cleanup...
